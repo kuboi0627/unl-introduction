@@ -6,5 +6,5 @@ usecase 予約
 usecase ログイン
 }
 利用者 -->予約
-予約 -->ログイン
-@enduml
+予約 -->ログイン :<< include >>
+@endumlD
