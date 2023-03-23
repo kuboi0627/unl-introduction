@@ -1,13 +1,12 @@
 @startuml ユースケース図
 left to right direction
 rectangle 盛岡商事{
-rectangle 販売部{
-  actor 従業員
-}
+  actor 出荷担当者
+
 rectangle 販売システム{
   usecase 注文商品を確認
   usecase 出荷状況を確認
 }
 }
-従業員 --> 注文商品を確認
-従業員 --> 出荷状況を確認
+出荷担当者 --> 注文商品を確認
+出荷担当者 --> 出荷状況を確認
