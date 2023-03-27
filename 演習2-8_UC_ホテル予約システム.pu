@@ -16,7 +16,7 @@ rectangle ホテル予約システム{
 利用者 --> (空欄状況\n確認)
 会員登録 ..> yoyaku :<< extend >>
 キャンペーン ..> yoyaku :<< extend >>
-yoyaku ..> ログイン :<< include >>
+yoyaku ..> ログイン :<< extend >>
 管理者 <|-- 従業員 
 管理者 --> 予約集計
 従業員 --> 空欄状況
