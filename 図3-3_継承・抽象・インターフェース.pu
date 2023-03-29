@@ -22,4 +22,58 @@ class 営業社員{
 }
 社員<|--down- 技術社員
 社員<|--down- 営業社員
+
+class Animal {
+---
++ Walk:void
++ {abstract} eat():int
++ {abstract} cry():void
+}
+class Dog {
+---
++ eat():int
++ cry():void
+}
+class Cat {
+---
++ eat():int
++ cry():void
+}
+Animal <|-down- Dog
+Animal <|-down- Cat
+
+class Word {
+---
++ enter():void
+}
+class Excel {
+---
++ enter():void
+}
+interface keyboard {
+' <<interface>>
+---
++ enter():void
+}
+' keyboard <|.. Word
+' keyboard <|.. Excel
+class User {
+}
+keyboard <-up- User:<< use >>
+
+class Word {
+---
++ enter():void
+}
+class Excel {
+---
++ enter():void
+}
+circle "keyboard" as I1
+Word --( I1
+Excel --(I1
+class User {
+}
+I1 <-- User:<< use >>
+
 @enduml
