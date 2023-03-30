@@ -1,0 +1,16 @@
+@startuml
+object "<u>車体：車</u>" as t1 
+
+object "タイヤ１：タイヤ" as t2
+
+object "タイヤ２：タイヤ" as t3
+
+object "タイヤ３：タイヤ" as t4
+
+object "タイヤ４：タイヤ" as t5
+
+t1 -- t2
+t1 -- t3
+t1 -- t4
+t1 -- t5
+@enduml
