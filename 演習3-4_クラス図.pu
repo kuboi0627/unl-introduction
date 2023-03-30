@@ -2,14 +2,11 @@
 left to right direction
 
 class 車{
-    - 車体
+    
 }
 
 class タイヤ {
-    - タイヤ１
-    - タイヤ２
-    - タイヤ３
-    - タイヤ４
+   
 }
 
 車 "1" o--"4" タイヤ
