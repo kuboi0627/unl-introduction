@@ -1,0 +1,18 @@
+@startuml
+object "<u>高橋洋平：社員</u>" as s1{
+
+}
+object "<u>樋口正之：社員</u>" as s2{
+
+}
+object "<u>情報処理安全確保支援士：資格</u>" as s3{
+
+}
+object "<u>LinuC試験Level１：資格</u>" as s4{
+
+}
+s1 -- s3
+s2 -- s3
+s1 -- s4
+
+@enduml
