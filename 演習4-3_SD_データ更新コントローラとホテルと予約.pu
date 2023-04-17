@@ -1,2 +1,13 @@
 @startuml
+hide footbox
+participant ":データ更新コントローラ" as control
+participant ":ホテル" as hotel
+participant ":予約" as y1
+activate control
+control ->hotel :予約する
+activate hotel
+create y1
+hotel -> y1 :<< oreate >>
+hotel -> hotel :予約登録()
+activate hotel
 @enduml

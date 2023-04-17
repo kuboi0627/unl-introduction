@@ -9,5 +9,17 @@ activate a1
 a1 -> boundary :商品検索（商品番号）
 activate boundary
 boundary -> control :商品検索（商品番号）
-control --> entity1 :<< oreate >>
+activate control
+create entity1
+control --> entity1 :<< create >>生成（）
+loop 商品カテゴリ数
+create entity2
+control -->> entity2 :<<< create >> 生成()
+activate entity1
+deactivate entity1
+control -> entity1 :商品カテゴリ設定（）
+end loop
+control -->> boundary :商品情報
+boundary -> boundary :商品情報表示（商品情報）
+activate boundary
 @enduml

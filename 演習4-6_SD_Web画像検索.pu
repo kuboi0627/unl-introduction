@@ -1,5 +1,22 @@
 @startuml
 hide footbox
 Actor ユーザ as a1
-
+participant ":ブラウザ" as boundary
+participant ":Webサーバー" as s1
+participant ":画像サーバー" as s2
+activate a1
+a1 -> boundary :リンクボタンを押す
+activate boundary
+boundary -> s1 :画像ファイル名を渡す
+activate s1
+s1 -> s2 :画像名を探す 命令を渡す
+activate s2
+s2 -> s2 :画像ファイルを探す
+s2 -->> s1 :画像ファイル
+deactivate s2
+s1 -->> boundary :HTMLと画像ファイル
+deactivate s1
+boundary -->>a1 :画像の閲覧
+deactivate boundary
+deactivate a1 
 @enduml

@@ -5,14 +5,19 @@ participant ":注文登録画面" as boundary
 participant ":商品" as entity1
 participant ":注文" as entity2
 activate a1
-a1 ->boundary :確認
+a1 ->boundary :商品情報確認
 activate boundary
-boundary -> entity1
+boundary -> entity1 :商品情報取得
 activate entity1
 entity1 -->>boundary :商品情報
-activate entity1
-entity1 -> entity1 :商品情報表示
+deactivate entity1
+boundary -> boundary :商品情報表示(商品情報)
+activate boundary
+deactivate boundary
+deactivate boundary
 a1 -> boundary :商品発注（注文情報）
+activate boundary
+create entity2
+boundary -> entity2 :生成()<< oreate >>
 activate entity2
-boundary -->entity2 
 @enduml
