@@ -1,0 +1,10 @@
+@startuml
+hide footbox
+participant "ログイン:予約画面" as boundary
+participant ":ログインコントローラ" as control
+activate boundary
+ boundary->> control:ログイン（メッセージを送る）
+activate control
+control -> control:確認操作（認証）
+activate control
+@enduml

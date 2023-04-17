@@ -1,0 +1,13 @@
+@startuml
+hide footbox
+Actor 会員 as a1
+participant "商品検索画面" as boundary
+participant "商品検索コントローラ" as control
+participant "商品" as entity1
+participant "商品カテゴリ" as entity2
+activate a1
+a1 -> boundary :商品検索（商品番号）
+activate boundary
+boundary -> control :商品検索（商品番号）
+control --> entity1 :<< oreate >>
+@enduml
