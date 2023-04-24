@@ -7,7 +7,7 @@ activate control
 control ->hotel :予約する
 activate hotel
 create y1
-hotel -> y1 :<< oreate >>
+hotel -> y1 :<< create >>
 hotel -> hotel :予約登録()
 activate hotel
 @enduml
