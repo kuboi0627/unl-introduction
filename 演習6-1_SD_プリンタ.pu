@@ -1,0 +1,7 @@
+@startuml プリンタ
+left to right direction
+[*] --> 待機中: 待機中
+待機中 --> 印刷中: 　
+印刷中 --> 用紙なし
+用紙なし -->[*]
+@enduml

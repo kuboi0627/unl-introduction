@@ -18,6 +18,6 @@ deactivate boundary
 a1 -> boundary :商品発注（注文情報）
 activate boundary
 create entity2
-boundary -> entity2 :生成()<< oreate >>
+boundary -> entity2 :生成()<< create >>
 activate entity2
 @enduml

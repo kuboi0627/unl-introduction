@@ -5,4 +5,3 @@ usecase 貯金を引き出す
 }
 金額を指定する <. 貯金を引き出す : << include >>
 @enduml
-〔
