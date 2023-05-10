@@ -1,3 +1,7 @@
-@startuml
-
+@startuml 部屋オブジェクト
+left to right direction
+[*] --> 空室状態
+空室状態 --> 予約状態: 予約
+予約状態 --> 使用状態: 予約済み
+使用状態 --> [*]: 使用中
 @enduml
