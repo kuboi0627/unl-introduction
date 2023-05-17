@@ -1,3 +1,4 @@
-@startuml
+@startuml 診察予約システム
+left to right direction
 
 @enduml
