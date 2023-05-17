@@ -6,13 +6,13 @@ rectangle 診察予約システム {
     usecase 予約情報を登録する as t
     usecase 順番を表示する as n
     usecase 予約を確認する as yoyaku
-    usecase 登録を番号を表示する as t1
+    usecase 予約を取り消す as t1
     usecase 現在の患者番号を一つ増やす as g
 }
 k --> t
 k --> n
 k --> yoyaku
 k --> t1
-g --> ku
+g <-- ku
 
 @enduml
