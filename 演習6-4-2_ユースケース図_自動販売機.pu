@@ -1,3 +1,14 @@
 @startuml 自動販売機
+left to right direction
+actor 客 as k
+actor ベンダー as b
+rectangle 自動販売機 {
+    usecase お金を投入する as t
+    usecase 飲み物を選択する as n
+    usecase 飲み物の補充をする as h
+}
 
+k --> t
+k --> n
+b --> h
 @enduml

@@ -1,3 +1,18 @@
 @startuml 自動販売機
+'left to right direction
+class 自動販売機 {
 
+}
+class ボタン {
+
+}
+class 料金装置 {
+
+}
+class ベンダー装置 {
+
+}
+自動販売機 "1" *--"10" ボタン
+自動販売機 "1" *--"1" 料金装置
+自動販売機 "1" *--"1" ベンダー装置
 @enduml

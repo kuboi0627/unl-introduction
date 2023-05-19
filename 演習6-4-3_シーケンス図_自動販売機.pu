@@ -1,2 +1,27 @@
 @startuml 自動販売機
+hide footbox
+actor 客
+participant 料金装置
+participant ボタン
+participant ベンダー装置
+
+activate 客
+
+客 --> 料金装置 :お金を入れる
+activate 料金装置
+
+客 --> ボタン : ボタンを押す
+activate ボタン
+
+ボタン --> ベンダー装置 : 飲み物の注文
+activate ベンダー装置
+
+ベンダー装置 --> ボタン : 飲み物の補充
+deactivate ボタン
+
+ボタン --> 料金装置 : 
+deactivate 料金装置
+
+料金装置 --> 客 :
+deactivate 客
 @enduml
