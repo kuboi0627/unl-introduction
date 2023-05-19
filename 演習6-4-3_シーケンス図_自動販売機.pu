@@ -16,12 +16,14 @@ activate ボタン
 ボタン --> ベンダー装置 : 飲み物の注文
 activate ベンダー装置
 
-ベンダー装置 --> ボタン : 飲み物の補充
+ベンダー装置 --> ボタン : 飲み物の出力
+deactivate ベンダー装置
+
+ボタン --> 料金装置 : 注文を完了
 deactivate ボタン
 
-ボタン --> 料金装置 : 
-deactivate 料金装置
 
-料金装置 --> 客 :
+料金装置 --> 客 : 飲み物の提供
+deactivate 料金装置
 deactivate 客
 @enduml
