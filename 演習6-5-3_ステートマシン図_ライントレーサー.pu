@@ -1,3 +1,17 @@
 @startuml ライントレーサー
+'left to right direction
 
+    state 電源ON{
+        state entity <<entryPoint>>
+        state exit <<exitPoint>>
+        entity --> 右旋回 
+        右旋回 --> 左旋回 : 暗い
+        左旋回 --> 右旋回 : 明るい
+        左旋回 --> exit
+    }
+    電源OFF --> entity : ボタンを押す
+    電源OFF --> exit
+    [*] --> 電源OFF
+    exit --> [*]
+    
 @enduml

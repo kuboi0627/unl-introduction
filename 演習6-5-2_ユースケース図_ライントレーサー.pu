@@ -1,3 +1,21 @@
 @startuml ライントレーサー
+left to right direction
+
+actor ユーザ
+actor CPU
+
+rectangle ライントレーサー{
+    usecase 電源SWを押す
+    usecase 右モータをONする
+    usecase 右モータをOFFする
+    usecase 左モータをONする
+    usecase 左モータをOFFする
+}
+
+ユーザ --> 電源SWを押す
+CPU --> 右モータをONする
+CPU --> 右モータをOFFする
+CPU --> 左モータをONする
+CPU --> 左モータをOFFする
 
 @enduml
