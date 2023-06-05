@@ -1,3 +1,12 @@
 @startuml ホテル予約システム
-
+title  予約フロー
+    start
+    :ユーザ名を入力する;
+    :パスワードを入力する;
+    if() is([認証成功]) then
+    :予約を行う;
+    else (認証失敗)
+    :ユーザ名とパスワードを入力する;
+    endif
+    stop
 @enduml
